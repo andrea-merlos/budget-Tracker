@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links my scss for styling -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Budget Tracker</title>
+  </head>
+  <body>
+    <header>
+      <!-- my header which I style with my primary-color in scss -->
+      <h1>Andrea's Budget Tracker</h1>
+    </header>
+    <!-- creating my inputs for description, amount and date -->
+    <section class="inputs">
+      <div>
+        <input type="text" id="description" placeholder="Description" />
+        <input type="number" id="amount" placeholder="Amount" />
+        <input type="date" id="date" />
+        <select id="type">
+          <!-- creating my select options for income or expenses  -->
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <!-- creating my button to input info -->
+        <button id="add-btn">Add</button>
+      </div>
+    </section>
+    <!-- displayes my input summary of budget, incoem and expenses  -->
+    <div class="summary">
+      <h2>Budget Summary</h2>
+      <p>Total Budget: <span id="total-budget">$0</span></p>
+      <p>Total Income: <span id="total-income">$0</span></p>
+      <p>Total Expenses: <span id="total-expenses">$0</span></p>
+    </div>
+    <!-- links my js for functionality  -->
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- thank you for checking work :)  -->

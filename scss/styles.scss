@@ -1,0 +1,97 @@
+// created my primary color and use later to header element
+$primary-color: rgba(255, 249, 249, 0.626);
+
+// creates my liner-gradient background
+@mixin gradient($color1, $color2) {
+  background: linear-gradient(to right, rgb(230, 126, 126), rgb(134, 134, 194));
+}
+
+// body styling
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  @include gradient(rgb(53, 177, 117), rgb(67, 67, 205));
+  // need this code above to make my background color work
+}
+
+// styles my H1 from html
+header {
+  text-align: center;
+  background-color: $primary-color;
+  color: rgb(12, 78, 136);
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+// styles my input and sets it to flex for responsivness
+.inputs {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 4rem;
+}
+// styles my summary input box and creates a box shadow effect
+.summary {
+  margin: 30px;
+  color: rgb(12, 78, 136);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(12, 78, 136);
+  text-align: center;
+}
+
+// change size for selector
+#type {
+  font-size: 1.3rem;
+}
+// change size for input boxs
+
+.inputs input {
+  font-size: 1.5rem;
+}
+
+// syles my button
+button {
+  background-color: $primary-color;
+  color: rgb(12, 78, 136);
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+// creates hover my hover effect
+button:hover {
+  background-color: rgb(12, 78, 136);
+  color: $primary-color;
+}
+
+@media (max-width: 768px) {
+  .inputs input {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .inputs button {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputs {
+    margin: 10px;
+    font-size: 1rem;
+  }
+}
+// thank you for checking work :)
